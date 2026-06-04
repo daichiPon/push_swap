@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/02 21:41:16 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/04 19:46:04 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
