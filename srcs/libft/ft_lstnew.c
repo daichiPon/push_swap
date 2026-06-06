@@ -6,11 +6,11 @@
 /*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 21:30:41 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/02 21:46:04 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/07 03:25:16 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 t_node *ft_lstnew(int value)
 {
     t_node *node;
