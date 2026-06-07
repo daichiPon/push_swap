@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/02 21:30:47 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/07 03:24:48 by nakamotodai      ###   ########.fr       */
+/*   Created: 2026/06/07 02:45:53 by nakamotodai       #+#    #+#             */
+/*   Updated: 2026/06/07 03:25:26 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-int ft_atoi(char *str)
+int ft_strcmp(const char *s1, const char *s2)
 {
     size_t i;
-    int res;
-    int sign;
-    i=0;
-    res=0;
-    sign=1;
-    if(str[i]=='-')
+
+    i = 0;
+    while (s1[i] || s2[i])
     {
-        sign=-1;
+        if (s1[i] != s2[i])
+            return ((int)((unsigned char)s1[i] - (unsigned char)s2[i]));
         i++;
     }
-    while(str[i])
-    {
-        res=res*10+str[i]-'0';
-        i++;
-    }
-    return (res*sign);
+    return (0);
 }

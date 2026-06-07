@@ -6,7 +6,7 @@
 /*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/02 00:53:38 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/07 04:01:28 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
+#include <unistd.h>
 
 typedef struct s_command
 {
@@ -45,5 +47,10 @@ typedef struct s_stack
     t_node  *top;
     size_t  size;
 }   t_stack;
+
+int         is_valid_number(char *str);
+int         arg_check(int argc, char *argv[]);
+double      compute_disorder(t_stack *a);
+void        init_stack(t_stack *a ,int argc,char *argv[]);
 
 #endif

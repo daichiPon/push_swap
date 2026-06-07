@@ -6,11 +6,11 @@
 /*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 21:40:14 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/02 21:40:15 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/07 03:25:12 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 void ft_lstadd_back(t_stack *a, t_node *node)
 {
     t_node *tail;
