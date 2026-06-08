@@ -16,7 +16,7 @@ void    reverse_rotate(t_stack *s)
 {
 	t_node	*tmp;
 	
-	if (s->size == 0)
+	if (s->size <= 1)
 		return;
 	tmp = s->top;
 	while(tmp->next)

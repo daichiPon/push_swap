@@ -17,7 +17,7 @@ void    rotate(t_stack *s)
 	t_node  *tmp;
     t_node  *last;
 
-    if (s->size == 0)
+    if (s->size <= 1)
         return;
     tmp = s->top;
     s->top = s->top->next;

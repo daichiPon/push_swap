@@ -26,6 +26,7 @@ void	pb(t_stack *a, t_stack *b)
 	if (b->top)
 		b->top->prev = tmp;
 	tmp->prev = NULL;
+	b->top = tmp;
 	a->size--;
 	b->size++;
 	ft_printf("pb\n");

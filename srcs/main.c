@@ -17,13 +17,12 @@
 int main(int argc,char *argv[])
 {
     t_stack a;
-    double test;
+    t_stack b;
     if(arg_check(argc,argv))
         return write(1,"Error\n",6);
     init_stack(&a,argc,argv);
-    // main.c:185 付近を確認
-    printf("size: %d\n", argc);
-    printf("size: %zu\n", a.size);
-    test=compute_disorder(&a);
-    printf("%f",test);
+    b.top = NULL;
+    b.size = 0;
+    medium_sort(&a, &b);
+    return (0);
 }
