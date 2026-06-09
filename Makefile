@@ -4,6 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address -I includes -I srcs/ft_prin
 SRCS = srcs/main.c srcs/utils/check.c srcs/utils/compute_disorder.c srcs/utils/init_stack.c\
 	srcs/libft/ft_atoi.c srcs/libft/ft_lstadd_back.c srcs/libft/ft_lstnew.c srcs/libft/ft_strcmp.c\
 	srcs/algorithms/medium.c\
+	srcs/algorithms/complex.c\
 	srcs/operations/pa.c srcs/operations/pb.c\
 	srcs/operations/ra.c srcs/operations/rb.c srcs/operations/rra.c srcs/operations/rrb.c\
 	srcs/operations/rr.c srcs/operations/rrr.c srcs/operations/rotate.c srcs/operations/reverse_rotate.c\

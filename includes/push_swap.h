@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/09 15:17:16 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/10 03:08:54 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int					arg_check(int argc, char *argv[]);
 double				compute_disorder(t_stack *a);
 void				init_stack(t_stack *a, int argc, char *argv[]);
 void				medium_sort(t_stack *a, t_stack *b);
+void				complex(t_stack *a, t_stack *b);
 
 void				rotate(t_stack *s);
 void				reverse_rotate(t_stack *s);
