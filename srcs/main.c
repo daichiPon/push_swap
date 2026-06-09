@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/09 15:17:37 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/09 16:02:46 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,16 @@ int	main(int argc, char *argv[])
 {
 	t_stack	a;
 	t_stack	b;
+	double	res;
 
 	if (arg_check(argc, argv))
 		return (write(1, "Error\n", 6));
 	init_stack(&a, argc, argv);
 	b.top = NULL;
 	b.size = 0;
+	res = compute_disorder(&a);
+	printf("%f", res);
+	fflush(stdout);
 	medium_sort(&a, &b);
 	return (0);
 }

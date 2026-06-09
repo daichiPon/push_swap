@@ -6,14 +6,14 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 03:59:23 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/09 14:42:05 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/09 16:02:32 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 #include "../../includes/push_swap.h"
 
-void	Bubbl_Sort(int *sort_arr, int n)
+void	bubbl_sort(int *sort_arr, int n)
 {
 	int	i;
 	int	j;
@@ -78,7 +78,7 @@ void	init_index(t_stack *a)
 		node = node->next;
 		i++;
 	}
-	Bubbl_Sort(sort_arr, n);
+	bubbl_sort(sort_arr, n);
 	add_index(sort_arr, a, n);
 	free(sort_arr);
 }

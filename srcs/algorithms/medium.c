@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 22:58:29 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/09 15:11:56 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:23:40 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ static void	push_chunk(t_stack *a, t_stack *b, int min, int max)
 	int	rotated;
 
 	mid = (min + max) / 2;
-	pushed = 0;
 	target = max - min + 1;
+	pushed = 0;
 	rotated = 0;
-	while (pushed < target)
+	while (pushed < target && rotated <= (int)a->size)
 	{
 		if (a->top->index >= min && a->top->index <= max)
 		{
@@ -71,8 +71,6 @@ static void	push_chunk(t_stack *a, t_stack *b, int min, int max)
 		{
 			ra(a);
 			rotated++;
-			if (rotated > (int)a->size)
-				break ;
 		}
 	}
 }
@@ -103,15 +101,13 @@ void	medium_sort(t_stack *a, t_stack *b)
 {
 	int	n;
 	int	chunk_size;
-	int	total_chunks;
 	int	i;
 	int	min;
 	int	max;
 
 	n = (int)a->size;
 	chunk_size = ft_chunk_size(n);
-	total_chunks = (n + chunk_size - 1) / chunk_size;
-	i = total_chunks - 1;
+	i = (n + chunk_size - 1) / chunk_size - 1;
 	while (i >= 0)
 	{
 		min = i * chunk_size;
