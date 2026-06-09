@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   medium.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 22:58:29 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/09 01:02:09 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/09 15:11:56 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,6 @@ void	medium_sort(t_stack *a, t_stack *b)
 	n = (int)a->size;
 	chunk_size = ft_chunk_size(n);
 	total_chunks = (n + chunk_size - 1) / chunk_size;
-
 	i = total_chunks - 1;
 	while (i >= 0)
 	{
@@ -122,6 +121,5 @@ void	medium_sort(t_stack *a, t_stack *b)
 		push_chunk(a, b, min, max);
 		i--;
 	}
-
 	push_all_to_a(a, b);
 }

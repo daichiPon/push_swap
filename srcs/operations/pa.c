@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:38:36 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/05 16:15:26 by hsachie          ###   ########.fr       */
+/*   Updated: 2026/06/09 15:15:27 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    pa(t_stack *a, t_stack *b)
+void	pa(t_stack *a, t_stack *b)
 {
-	t_node *tmp;
-	
-    if (b->size == 0)
-		return;
+	t_node	*tmp;
+
+	if (b->size == 0)
+		return ;
 	tmp = b->top;
 	b->top = b->top->next;
 	if (b->top)

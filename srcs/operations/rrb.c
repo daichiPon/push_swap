@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   rrb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 18:58:08 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/06 18:58:16 by hsachie          ###   ########.fr       */
+/*   Updated: 2026/06/09 15:12:47 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    rrb(t_stack *b)
+void	rrb(t_stack *b)
 {
-    reverse_rotate(b);
-    ft_printf("rrb\n");
+	reverse_rotate(b);
+	ft_printf("rrb\n");
 }

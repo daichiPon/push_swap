@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:45:13 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/05 17:10:23 by hsachie          ###   ########.fr       */
+/*   Updated: 2026/06/09 15:13:51 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	pb(t_stack *a, t_stack *b)
 {
 	t_node	*tmp;
-	
+
 	if (a->size == 0)
-		return;
+		return ;
 	tmp = a->top;
 	a->top = a->top->next;
 	if (a->top)
