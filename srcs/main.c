@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/10 03:18:59 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/10 21:31:22 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,31 @@ int	main(int argc, char *argv[])
 	t_stack	b;
 	double	res;
 	t_node	*node;
+	int		flag;
+	int		bench;
 
-	if (arg_check(argc, argv))
+	flag=0;
+	bench=0;
+
+	if (arg_check(argc, argv, &flag, &bench))
 		return (write(1, "Error\n", 6));
 	init_stack(&a, argc, argv);
 	b.top = NULL;
 	b.size = 0;
 	res = compute_disorder(&a);
 	printf("%f", res);
+	printf("フラグ%d\n",flag);
 	fflush(stdout);
-	complex(&a, &b);
-	complex(&a, &b);
+	if(flag==4)
+	{
+		printf("compex");
+		complex(&a, &b);
+	}
+	else if(flag==3)
+	{
+		printf("mediumsort");
+		medium_sort(&a,&b);
+	}
 	node = a.top;
 	while (node)
 	{

@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 22:58:29 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/10 03:13:04 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/10 19:23:42 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,18 @@ static int	find_max_pos(t_stack *b)
 	t_node	*node;
 	int		max_index;
 	int		max_pos;
-	int		pos;
 
 	node = b->top;
 	max_index = node->index;
 	max_pos = 0;
-	pos = 0;
 	while (node)
 	{
 		if (node->index > max_index)
 		{
 			max_index = node->index;
-			max_pos = pos;
+			max_pos++;
 		}
 		node = node->next;
-		pos++;
 	}
 	return (max_pos);
 }

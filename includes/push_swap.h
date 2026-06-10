@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/10 03:08:54 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/10 20:32:03 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ typedef struct s_stack
 }					t_stack;
 
 int					is_valid_number(char *str);
-int					arg_check(int argc, char *argv[]);
+int					arg_check(int argc, char *argv[],int *flag,int *bench);
 double				compute_disorder(t_stack *a);
 void				init_stack(t_stack *a, int argc, char *argv[]);
 void				medium_sort(t_stack *a, t_stack *b);
