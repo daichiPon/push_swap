@@ -22,5 +22,6 @@ void	sb(t_stack *b)
 	tmp = b->top->value;
 	b->top->value = b->top->next->value;
 	b->top->next->value = tmp;
+	op_count()->sb++;
 	printf("sb\n");
 }

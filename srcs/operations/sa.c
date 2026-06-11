@@ -22,5 +22,6 @@ void	sa(t_stack *a)
 	tmp = a->top->value;
 	a->top->value = a->top->next->value;
 	a->top->next->value = tmp;
+	op_count()->sa++;
 	printf("sa\n");
 }

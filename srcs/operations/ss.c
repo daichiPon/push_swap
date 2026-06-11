@@ -29,5 +29,6 @@ void	ss(t_stack *a, t_stack *b)
 		b->top->value = b->top->next->value;
 		b->top->next->value = tmp;
 	}
+	op_count()->ss++;
 	printf("ss\n");
 }

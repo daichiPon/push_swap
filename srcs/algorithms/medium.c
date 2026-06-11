@@ -27,18 +27,21 @@ static int	find_max_pos(t_stack *b)
 	t_node	*node;
 	int		max_index;
 	int		max_pos;
+	int		i;
 
 	node = b->top;
 	max_index = node->index;
 	max_pos = 0;
+	i = 0;
 	while (node)
 	{
 		if (node->index > max_index)
 		{
 			max_index = node->index;
-			max_pos++;
+			max_pos = i;
 		}
 		node = node->next;
+		i++;
 	}
 	return (max_pos);
 }

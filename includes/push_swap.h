@@ -52,6 +52,8 @@ typedef struct s_stack
 int					is_valid_number(char *str);
 int					arg_check(int argc, char *argv[],int *flag,int *bench);
 double				compute_disorder(t_stack *a);
+t_command			*op_count(void);
+void				print_bench(double disorder, int flag);
 void				init_stack(t_stack *a, int argc, char *argv[]);
 void				medium_sort(t_stack *a, t_stack *b);
 void				complex(t_stack *a, t_stack *b);

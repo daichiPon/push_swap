@@ -16,5 +16,6 @@ void	rr(t_stack *a, t_stack *b)
 {
 	rotate(a);
 	rotate(b);
+	op_count()->rr++;
 	printf("rr\n");
 }

@@ -29,5 +29,6 @@ void	pa(t_stack *a, t_stack *b)
 	a->top = tmp;
 	a->size++;
 	b->size--;
+	op_count()->pa++;
 	ft_printf("pa\n");
 }

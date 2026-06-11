@@ -29,5 +29,6 @@ void	pb(t_stack *a, t_stack *b)
 	b->top = tmp;
 	a->size--;
 	b->size++;
+	op_count()->pb++;
 	ft_printf("pb\n");
 }
