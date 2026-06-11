@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 21:40:27 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/06 18:44:14 by hsachie          ###   ########.fr       */
+/*   Updated: 2026/06/09 15:15:20 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ra(t_stack *a)
+void	ra(t_stack *a)
 {
-  	rotate(a);
-    ft_printf("ra\n");
+	rotate(a);
+	ft_printf("ra\n");
 }
