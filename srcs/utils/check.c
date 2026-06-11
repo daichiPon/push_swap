@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 03:42:10 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/10 21:26:41 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/12 04:32:48 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	flag_check(int argc, char *argv[], int *flag, int *bench)
 				*flag = 3;
 			else if (ft_strcmp(argv[i], "--complex") == 0)
 				*flag = 4;
-			else if (ft_strcmp(argv[i], "--*") == 0)
+			else if (ft_strcmp(argv[i], "--bench") == 0)
 				*bench = 1;
 		}
 		i++;

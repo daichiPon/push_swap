@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 16:16:05 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/05/30 19:38:35 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/12 06:00:13 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ const char	*ft_strchr(const char *s, int c)
 //     const char *res;
 //     int c='%';
 //     res=ft_strchr(s,c);
-//     printf("\n%s",res);
+//     ft_printf("\n%s",res);
 // }

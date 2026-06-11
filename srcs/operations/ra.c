@@ -15,5 +15,6 @@
 void	ra(t_stack *a)
 {
 	rotate(a);
+	op_count()->ra++;
 	ft_printf("ra\n");
 }

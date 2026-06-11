@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ss.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:42:24 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/09 15:13:05 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/12 06:00:13 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void	ss(t_stack *a, t_stack *b)
 		b->top->value = b->top->next->value;
 		b->top->next->value = tmp;
 	}
-	printf("ss\n");
+	op_count()->ss++;
+	ft_printf("ss\n");
 }

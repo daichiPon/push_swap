@@ -45,19 +45,12 @@ int	main(int argc, char *argv[])
 	b.top = NULL;
 	b.size = 0;
 	res = compute_disorder(&a);
-	printf("%f", res);
-	printf("フラグ%d\n",flag);
-	fflush(stdout);
-	if(flag==4)
-	{
-		printf("compex");
+	if (flag == 4)
 		complex(&a, &b);
-	}
-	else if(flag==3)
-	{
-		printf("mediumsort");
-		medium_sort(&a,&b);
-	}
+	else if (flag == 3)
+		medium_sort(&a, &b);
+	if (bench)
+		print_bench(res, flag);
 	node = a.top;
 	while (node)
 	{
