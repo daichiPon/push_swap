@@ -10,7 +10,7 @@ NAME = push_swap.a
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
  
-all: $(LIBFT)$(NAME)
+all: $(LIBFT) $(NAME)
 
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
