@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 00:00:00 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/06/12 00:00:00 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/12 05:59:35 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,18 @@ void	print_bench(double disorder, int flag)
 	t_command	*c;
 
 	c = op_count();
-	printf("Disorder: %.2f%%\n", disorder * 100);
-	printf("Strategy: %s\n", strategy_name(flag));
-	printf("Total operations: %d\n", total_ops(c));
-	printf("sa: %d\n", c->sa);
-	printf("sb: %d\n", c->sb);
-	printf("ss: %d\n", c->ss);
-	printf("pa: %d\n", c->pa);
-	printf("pb: %d\n", c->pb);
-	printf("ra: %d\n", c->ra);
-	printf("rb: %d\n", c->rb);
-	printf("rr: %d\n", c->rr);
-	printf("rra: %d\n", c->rra);
-	printf("rrb: %d\n", c->rrb);
-	printf("rrr: %d\n", c->rrr);
+	ft_printf("Disorder: %.2f%%\n", disorder * 100);
+	ft_printf("Strategy: %s\n", strategy_name(flag));
+	ft_printf("Total operations: %d\n", total_ops(c));
+	ft_printf("sa: %d\n", c->sa);
+	ft_printf("sb: %d\n", c->sb);
+	ft_printf("ss: %d\n", c->ss);
+	ft_printf("pa: %d\n", c->pa);
+	ft_printf("pb: %d\n", c->pb);
+	ft_printf("ra: %d\n", c->ra);
+	ft_printf("rb: %d\n", c->rb);
+	ft_printf("rr: %d\n", c->rr);
+	ft_printf("rra: %d\n", c->rra);
+	ft_printf("rrb: %d\n", c->rrb);
+	ft_printf("rrr: %d\n", c->rrr);
 }

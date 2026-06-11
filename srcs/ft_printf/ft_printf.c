@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 04:07:23 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/05/29 21:59:00 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/12 06:00:13 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,5 @@ int	ft_printf(const char *format, ...)
 //     int d;
 //     d=1002;
 //     ft_printf(" %c %c %c ", '0', 0, '1');
-//     printf("\n本物-%dだよ",d);
+//     ft_printf("\n本物-%dだよ",d);
 // }

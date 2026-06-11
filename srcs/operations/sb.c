@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 11:57:22 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/09 15:13:41 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/12 06:00:13 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	sb(t_stack *b)
 	b->top->value = b->top->next->value;
 	b->top->next->value = tmp;
 	op_count()->sb++;
-	printf("sb\n");
+	ft_printf("sb\n");
 }
