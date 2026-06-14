@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address -I includes -I srcs/ft_printf
 
-SRCS = srcs/main.c srcs/utils/check.c srcs/utils/compute_disorder.c srcs/utils/init_stack.c\
+SRCS = srcs/main.c srcs/utils/check.c srcs/utils/compute_disorder.c srcs/utils/init_stack.c srcs/utils/bench.c\
 	srcs/libft/ft_atoi.c srcs/libft/ft_lstadd_back.c srcs/libft/ft_lstnew.c srcs/libft/ft_strcmp.c srcs/libft/ft_strncmp.c\
 	srcs/algorithms/medium.c\
 	srcs/algorithms/complex.c\
@@ -13,7 +13,7 @@ SRCS = srcs/main.c srcs/utils/check.c srcs/utils/compute_disorder.c srcs/utils/i
 	srcs/ft_printf/utils/ft_putchar.c srcs/ft_printf/utils/ft_putnbr.c srcs/ft_printf/utils/ft_putstr.c\
 	srcs/ft_printf/utils/ft_putnbr_u.c srcs/ft_printf/utils/ft_puthex_big.c\
 	srcs/ft_printf/utils/ft_puthex_lit.c srcs/ft_printf/utils/ft_puthex_p.c\
-	srcs/ft_printf/utils/ft_strchr.c
+	srcs/ft_printf/utils/ft_strchr.c srcs/ft_printf/utils/ft_putfloat.c
 
 OBJS = $(SRCS:.c=.o)
 

@@ -4,7 +4,7 @@
 
 ## “Description”
 
-`ft_printf` は、C標準ライブラリ関数 `printf` を再実装したプロジェクトです。Cにおける可変長引数関数の仕組みを理解し、オリジナルの `printf` のコアとなるフォーマット処理を自力で再現することを目的としています。
+`ft_printf` は、C標準ライブラリ関数 `ft_printf` を再実装したプロジェクトです。Cにおける可変長引数関数の仕組みを理解し、オリジナルの `ft_printf` のコアとなるフォーマット処理を自力で再現することを目的としています。
 
 以下の変換指定子に対応しています：
 
@@ -18,7 +18,7 @@
 | `%x` / `%X` | 符号なし16進整数（小文字/大文字） |
 | `%%` | パーセント記号そのもの |
 
-オリジナルの `printf` と同様に、出力した文字数を返り値として返します。
+オリジナルの `ft_printf` と同様に、出力した文字数を返り値として返します。
 
 ## アルゴリズムとデータ構造
 
@@ -80,9 +80,9 @@ int main(void)
 
 ### ドキュメント・リファレンス
 
-- [cppreference — printf（英語）](https://en.cppreference.com/w/c/io/fprintf) — `printf` のフォーマット指定子と動作の公式リファレンス。
+- [cppreference — ft_printf（英語）](https://en.cppreference.com/w/c/io/fprintf) — `ft_printf` のフォーマット指定子と動作の公式リファレンス。
 - [cppreference — 可変長引数関数（英語）](https://en.cppreference.com/w/c/variadic) — `va_list`・`va_start`・`va_arg`・`va_end` のリファレンス。
-- [GNU Cライブラリマニュアル — Formatted Output（英語）](https://www.gnu.org/software/libc/manual/html_node/Formatted-Output.html) — glibcにおける `printf` の実装に関する詳細な解説。
+- [GNU Cライブラリマニュアル — Formatted Output（英語）](https://www.gnu.org/software/libc/manual/html_node/Formatted-Output.html) — glibcにおける `ft_printf` の実装に関する詳細な解説。
 - [42 公式Subject PDF](https://cdn.intra.42.fr/pdf/pdf/96586/en.subject.pdf) — プロジェクトの課題PDF。
 
 ### AIの使用について

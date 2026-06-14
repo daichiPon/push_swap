@@ -15,5 +15,6 @@
 void	rb(t_stack *b)
 {
 	rotate(b);
+	op_count()->rb++;
 	ft_printf("rb\n");
 }

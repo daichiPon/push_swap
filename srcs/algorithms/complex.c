@@ -27,8 +27,8 @@ int	ft_max_value(t_stack *a)
 	node = a->top;
 	while (node)
 	{
-		if (node->value > max_value)
-			max_value = node->value;
+		if (node->index > max_value)
+			max_value = node->index;
 		node = node->next;
 	}
 	return (max_value);
@@ -63,7 +63,7 @@ void	complex(t_stack *a, t_stack *b)
 		size = a->size;
 		while (size > 0)
 		{
-			bynary = a->top->value >> i & 1;
+			bynary = a->top->index >> i & 1;
 			if (bynary == 0)
 				pb(a, b);
 			else

@@ -16,5 +16,6 @@ void	rrr(t_stack *a, t_stack *b)
 {
 	reverse_rotate(a);
 	reverse_rotate(b);
+	op_count()->rrr++;
 	ft_printf("rrr\n");
 }

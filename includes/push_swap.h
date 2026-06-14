@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/11 08:28:14 by hsachie          ###   ########.fr       */
+/*   Updated: 2026/06/12 06:20:50 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ typedef struct s_node
 {
 	int				value;
 	int				index;
-	t_command		command;
 	struct s_node	*prev;
 	struct s_node	*next;
 }					t_node;
@@ -52,6 +51,8 @@ typedef struct s_stack
 int					is_valid_number(char *str);
 int					arg_check(int argc, char *argv[],int *flag,int *bench);
 double				compute_disorder(t_stack *a);
+t_command			*op_count(void);
+void				print_bench(double disorder, int flag);
 void				init_stack(t_stack *a, int argc, char *argv[]);
 void				medium_sort(t_stack *a, t_stack *b);
 void				complex(t_stack *a, t_stack *b);

@@ -21,7 +21,6 @@ t_node	*ft_lstnew(int value)
 		return (NULL);
 	node->value = value;
 	node->index = 0;
-	node->command = (t_command){0};
 	node->prev = NULL;
 	node->next = NULL;
 	return (node);

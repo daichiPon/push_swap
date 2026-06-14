@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 21:13:24 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/09 15:13:27 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/12 06:00:13 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	sa(t_stack *a)
 	tmp = a->top->value;
 	a->top->value = a->top->next->value;
 	a->top->next->value = tmp;
-	printf("sa\n");
+	op_count()->sa++;
+	ft_printf("sa\n");
 }

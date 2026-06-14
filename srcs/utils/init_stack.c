@@ -94,6 +94,11 @@ void	init_stack(t_stack *a, int argc, char *argv[])
 	i = 1;
 	while (i < argc)
 	{
+		if (ft_strncmp(argv[i], "--", 2) == 0)
+		{
+			i++;
+			continue ;
+		}
 		node = ft_lstnew(ft_atoi(argv[i]));
 		if (!node)
 			return ;

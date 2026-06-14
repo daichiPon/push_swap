@@ -23,5 +23,6 @@ int			ft_putnbr_u(unsigned int n);
 int			ft_puthex_lit(unsigned int n);
 int			ft_puthex_big(unsigned int n);
 int			ft_puthex_p(void *n);
+int			ft_putfloat(double n, int prec);
 
 #endif
