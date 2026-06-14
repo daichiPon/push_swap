@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/12 06:20:50 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/14 20:43:14 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,7 @@ void    rrr(t_stack *a, t_stack *b);
 void	sa(t_stack *a);
 void	sb(t_stack *b);
 void	ss(t_stack *a, t_stack *b);
-static void push_max_to_b(t_stack *a, t_stack *b, int *size);
 void    simple_sort(t_stack *a, t_stack *b);
-static void	sort_three_cases(t_stack *a, int top, int mid, int bot);
 void	sort_three(t_stack *a);
 int     stack_size(t_stack *a);
 int	is_sorted(t_stack *a);

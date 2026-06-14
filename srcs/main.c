@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/10 21:31:22 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/14 20:43:53 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int	main(int argc, char *argv[])
 		complex(&a, &b);
 	else if (flag == 3)
 		medium_sort(&a, &b);
+	else if (flag == 2)
+		simple_sort(&a, &b);
 	if (bench)
 		print_bench(res, flag);
 	node = a.top;
