@@ -21,6 +21,8 @@ NAME = push_swap
 
 LIBFT_DIR = srcs/libft
 LIBFT = $(LIBFT_DIR)/libft.a
+ 
+all: $(LIBFT) $(NAME)
 
 all: $(NAME)
 
