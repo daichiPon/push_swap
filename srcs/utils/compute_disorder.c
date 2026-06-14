@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   compute_disorder.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/02 21:40:14 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/09 15:15:57 by dnakamot         ###   ########.fr       */
+/*   Created: 2026/06/07 03:47:07 by nakamotodai       #+#    #+#             */
+/*   Updated: 2026/06/09 15:49:21 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	ft_lstadd_back(t_stack *a, t_node *node)
+double	compute_disorder(t_stack *a)
 {
-	t_node	*tail;
+	size_t	mistakes;
+	size_t	total_pairs;
+	t_node	*prev;
+	t_node	*cmp;
 
-	if (!node)
-		return ;
-	if (!a->top)
+	mistakes = 0;
+	total_pairs = 0;
+	prev = a->top;
+	while (prev && prev->next)
 	{
-		a->top = node;
+		cmp = prev->next;
+		while (cmp)
+		{
+			total_pairs += 1;
+			if (prev->value > cmp->value)
+				mistakes += 1;
+			cmp = cmp->next;
+		}
+		prev = prev->next;
 	}
-	else
-	{
-		tail = a->top;
-		while (tail->next)
-			tail = tail->next;
-		tail->next = node;
-		node->prev = tail;
-	}
-	a->size++;
+	return ((double)mistakes / total_pairs);
 }

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 23:54:45 by hsachie           #+#    #+#             */
 /*   Updated: 2026/06/11 08:25:09 by hsachie          ###   ########.fr       */
@@ -15,6 +15,6 @@
 void	rr(t_stack *a, t_stack *b)
 {
 	rotate(a);
-    rotate(b);
+	rotate(b);
 	printf("rr\n");
 }

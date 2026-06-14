@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rrr.c                                              :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 18:58:30 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/09 15:12:53 by dnakamot         ###   ########.fr       */
+/*   Created: 2026/06/07 02:45:53 by nakamotodai       #+#    #+#             */
+/*   Updated: 2026/06/09 15:15:45 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
-void	rrr(t_stack *a, t_stack *b)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	reverse_rotate(a);
-	reverse_rotate(b);
-	ft_printf("rrr\n");
+	size_t	i;
+
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return ((int)((unsigned char)s1[i] - (unsigned char)s2[i]));
+		i++;
+	}
+	return (0);
 }
