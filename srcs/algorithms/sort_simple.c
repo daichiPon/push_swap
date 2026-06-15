@@ -6,28 +6,28 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 21:56:10 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/15 21:12:33 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/16 00:01:12 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate_to_min(t_stack *a, int max_idx, int size)
+void	rotate_to_min(t_stack *a, int min_idx, int size)
 {
-	if (max_idx <= size / 2)
+	if (min_idx <= size / 2)
 	{
-		while (max_idx > 0)
+		while (min_idx > 0)
 		{
 			ra(a);
-			max_idx--;
+			min_idx--;
 		}
 	}
 	else
 	{
-		while (max_idx < size)
+		while (min_idx < size)
 		{
 			rra(a);
-			max_idx++;
+			min_idx++;
 		}
 	}
 }
