@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 08:01:48 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/15 16:35:15 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/15 19:49:58 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,22 @@ int	is_sorted(t_stack *a)
 	return (1);
 }
 
-int	find_max_index(t_stack *a)
+int	find_min_index(t_stack *a)
 {
 	t_node	*cur;
-	int	max;
+	int	min;
 	int	idx;
 	int i;
 
 	cur = a->top;
-	max = cur->value;
+	min = cur->value;
 	idx = 0;
 	i = 0;
 	while (cur)
 	{
-		if (cur->value > max)
+		if (cur->value < min)
 		{
-			max = cur->value;
+			min = cur->value;
 			idx = i;
 		}
 		cur = cur->next;
@@ -50,7 +50,7 @@ int	find_max_index(t_stack *a)
 	return (idx);
 }
 
-void	rotate_to_max(t_stack *a, int max_idx, int size)
+void	rotate_to_min(t_stack *a, int max_idx, int size)
 {
 	if (max_idx <= size / 2)
 	{

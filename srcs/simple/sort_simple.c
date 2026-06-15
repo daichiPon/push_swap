@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 21:56:10 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/15 16:31:40 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/15 19:46:34 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 static void push_max_to_b(t_stack *a, t_stack *b, int *size)
 {
-    int max_idx;
+    int min_idx;
 
-    max_idx = find_max_index(a);
-    rotate_to_max(a, max_idx, *size);
+    min_idx = find_min_index(a);
+    rotate_to_min(a, min_idx, *size);
     pb(a, b);
     (*size)--;
 }

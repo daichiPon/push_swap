@@ -25,3 +25,10 @@ push_swap/
 │       ├── disorder.c   # 無秩序度の計算
 │       └── bench.c      # --benchモード
 ```
+
+
+シェル変数を使用した実行コマンド
+```zsh
+ % ARG=$(shuf -i 1-500 -n 100 | tr '\n' ' ')
+./push_swap --medium ${=ARG}
+```

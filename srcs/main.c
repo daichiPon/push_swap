@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/14 20:43:53 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 19:52:38 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int	main(int argc, char *argv[])
 	b.top = NULL;
 	b.size = 0;
 	res = compute_disorder(&a);
+	printf("flagだ%d",flag);
 	if (flag == 4)
 		complex(&a, &b);
 	else if (flag == 3)
@@ -54,6 +55,7 @@ int	main(int argc, char *argv[])
 	if (bench)
 		print_bench(res, flag);
 	node = a.top;
+	ft_printf("結果");
 	while (node)
 	{
 		ft_printf("a: %d\n", node->value);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/15 17:00:38 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/15 19:46:53 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ t_command			*op_count(void);
 void				medium_sort(t_stack *a, t_stack *b);
 void				complex(t_stack *a, t_stack *b);
 void    			simple_sort(t_stack *a, t_stack *b);
-int					find_max_index(t_stack *a);
+int					find_min_index(t_stack *a);
 void				sort_three(t_stack *a);
-void				rotate_to_max(t_stack *a, int max_idx, int size);
+void				rotate_to_min(t_stack *a, int max_idx, int size);
 void				print_bench(double disorder, int flag);
 
 void				rotate(t_stack *s);
