@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 21:56:10 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/14 20:37:25 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 16:31:40 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ void    simple_sort(t_stack *a, t_stack *b)
 {
     int size;
 
-    size = stack_size(a);
-    if (size <= 1 || is_sorted(a))
-        return ;
+    size = a->size;
     if (size == 2)
     {
         if (a->top->value > a->top->next->value)

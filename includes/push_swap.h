@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/14 20:43:14 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 17:00:38 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,20 @@ typedef struct s_stack
 	size_t			size;
 }					t_stack;
 
-int					is_valid_number(char *str);
+
 int					arg_check(int argc, char *argv[],int *flag,int *bench);
+int					is_valid_number(char *str);
+void				init_stack(t_stack *a, int argc, char *argv[]);
 double				compute_disorder(t_stack *a);
 t_command			*op_count(void);
-void				print_bench(double disorder, int flag);
-void				init_stack(t_stack *a, int argc, char *argv[]);
+
 void				medium_sort(t_stack *a, t_stack *b);
 void				complex(t_stack *a, t_stack *b);
+void    			simple_sort(t_stack *a, t_stack *b);
+int					find_max_index(t_stack *a);
+void				sort_three(t_stack *a);
+void				rotate_to_max(t_stack *a, int max_idx, int size);
+void				print_bench(double disorder, int flag);
 
 void				rotate(t_stack *s);
 void				reverse_rotate(t_stack *s);
@@ -70,25 +76,5 @@ void				rr(t_stack *a, t_stack *b);
 void				sa(t_stack *a);
 void				sb(t_stack *b);
 void				ss(t_stack *a, t_stack *b);
-
-void    pa(t_stack *a, t_stack *b);
-void	pb(t_stack *a, t_stack *b);
-void    ra(t_stack *a);
-void	rb(t_stack *b);
-void    reverse_rotate(t_stack *s);
-void    rotate(t_stack *s);
-void	rr(t_stack *a, t_stack *b);
-void    rra(t_stack *a);
-void    rrb(t_stack *b);
-void    rrr(t_stack *a, t_stack *b);
-void	sa(t_stack *a);
-void	sb(t_stack *b);
-void	ss(t_stack *a, t_stack *b);
-void    simple_sort(t_stack *a, t_stack *b);
-void	sort_three(t_stack *a);
-int     stack_size(t_stack *a);
-int	is_sorted(t_stack *a);
-int	find_max_index(t_stack *a);
-void	rotate_to_max(t_stack *a, int max_idx, int size);
 
 #endif

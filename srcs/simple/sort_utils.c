@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 08:01:48 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/10 21:04:32 by hsachie          ###   ########.fr       */
+/*   Updated: 2026/06/15 16:35:15 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,39 @@ void	rotate_to_max(t_stack *a, int max_idx, int size)
 			max_idx++;
 		}
 	}
+}
+
+static void	sort_three_cases(t_stack *a, int top, int mid, int bot)
+{
+	if (top > mid && mid < bot && top < bot)
+		sa(a);
+	else if (top < mid && mid > bot && top < bot)
+	{
+		sa(a);
+		ra(a);
+	}
+	else if (top > mid && mid < bot && top > bot)
+		ra(a);
+	else if (top < mid && mid > bot && top > bot)
+		rra(a);
+	else if (top > mid && mid > bot)
+	{
+		sa(a);
+		rra(a);
+	}
+}
+
+void	sort_three(t_stack *a)
+{
+	if (a->size < 2)
+		return ;
+	if (a->size == 2)
+	{
+		if (a->top->value > a->top->next->value)
+			sa(a);
+		return ;
+	}
+	sort_three_cases(a, a->top->value,
+		a->top->next->value,
+		a->top->next->next->value);
 }

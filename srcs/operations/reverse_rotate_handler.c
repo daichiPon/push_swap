@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   reverse_rotate_handler.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 18:47:36 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/09 15:14:13 by dnakamot         ###   ########.fr       */
+/*   Created: 2026/06/06 18:57:47 by hsachie           #+#    #+#             */
+/*   Updated: 2026/06/15 16:45:59 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,26 @@ void	reverse_rotate(t_stack *s)
 	s->top->prev = tmp;
 	s->top = tmp;
 	s->top->prev = NULL;
+}
+
+void	rra(t_stack *a)
+{
+	reverse_rotate(a);
+	op_count()->rra++;
+	ft_printf("rra\n");
+}
+
+void	rrb(t_stack *b)
+{
+	reverse_rotate(b);
+	op_count()->rrb++;
+	ft_printf("rrb\n");
+}
+
+void	rrr(t_stack *a, t_stack *b)
+{
+	reverse_rotate(a);
+	reverse_rotate(b);
+	op_count()->rrr++;
+	ft_printf("rrr\n");
 }

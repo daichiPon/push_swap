@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   rotate_handler.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 18:40:25 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/09 15:14:25 by dnakamot         ###   ########.fr       */
+/*   Created: 2026/06/05 21:40:27 by hsachie           #+#    #+#             */
+/*   Updated: 2026/06/15 16:44:32 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,26 @@ void	rotate(t_stack *s)
 	last->next = tmp;
 	tmp->prev = last;
 	tmp->next = NULL;
+}
+
+void	ra(t_stack *a)
+{
+	rotate(a);
+	op_count()->ra++;
+	ft_printf("ra\n");
+}
+
+void	rb(t_stack *b)
+{
+	rotate(b);
+	op_count()->rb++;
+	ft_printf("rb\n");
+}
+
+void	rr(t_stack *a, t_stack *b)
+{
+	rotate(a);
+	rotate(b);
+	op_count()->rr++;
+	ft_printf("rr\n");
 }
