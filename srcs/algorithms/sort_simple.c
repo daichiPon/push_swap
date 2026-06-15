@@ -6,11 +6,56 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 21:56:10 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/15 19:46:34 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 20:07:24 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	rotate_to_min(t_stack *a, int max_idx, int size)
+{
+	if (max_idx <= size / 2)
+	{
+		while (max_idx > 0)
+		{
+			ra(a);
+			max_idx--;
+		}
+	}
+	else
+	{
+		while (max_idx < size)
+		{
+			rra(a);
+			max_idx++;
+		}
+	}
+}
+
+int	find_min_index(t_stack *a)
+{
+	t_node	*cur;
+	int	min;
+	int	idx;
+	int i;
+
+	cur = a->top;
+	min = cur->value;
+	idx = 0;
+	i = 0;
+	while (cur)
+	{
+		if (cur->value < min)
+		{
+			min = cur->value;
+			idx = i;
+		}
+		cur = cur->next;
+		i++;
+	}
+	return (idx);
+}
+
 static void push_max_to_b(t_stack *a, t_stack *b, int *size)
 {
     int min_idx;
