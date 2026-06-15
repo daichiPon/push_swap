@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/15 21:13:29 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 21:40:24 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,7 @@ int	main(int argc, char *argv[])
 	bench = 0;
 	if (arg_check(argc, argv, &flag, &bench))
 		return (write(1, "Error\n", 6));
-	init_stack(&a, argc, argv);
-	b.top = NULL;
-	b.size = 0;
+	init_stack(&a, &b, argc, argv);
 	res = compute_disorder(&a);
 	printf("flagだ%d", flag);
 	if (flag == 4)

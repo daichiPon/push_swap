@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/15 21:13:40 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 21:40:42 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ typedef struct s_stack
 
 int					arg_check(int argc, char *argv[], int *flag, int *bench);
 int					is_valid_number(char *str);
-void				init_stack(t_stack *a, int argc, char *argv[]);
+void				init_stack(t_stack *a, t_stack *b, int argc, char *argv[]);
 double				compute_disorder(t_stack *a);
 t_command			*op_count(void);
 

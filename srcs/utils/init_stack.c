@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 03:59:23 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/09 16:02:32 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 21:39:58 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	init_index(t_stack *a)
 	free(sort_arr);
 }
 
-void	init_stack(t_stack *a, int argc, char *argv[])
+void	init_stack(t_stack *a, t_stack *b, int argc, char *argv[])
 {
 	int		i;
 	t_node	*node;
@@ -91,6 +91,8 @@ void	init_stack(t_stack *a, int argc, char *argv[])
 	node = NULL;
 	a->top = node;
 	a->size = 0;
+	b->top = NULL;
+	b->size = 0;
 	i = 1;
 	while (i < argc)
 	{
