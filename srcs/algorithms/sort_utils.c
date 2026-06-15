@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 08:01:48 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/15 20:06:45 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 21:11:31 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	sort_three(t_stack *a)
 			sa(a);
 		return ;
 	}
-	sort_three_cases(a, a->top->value,
-		a->top->next->value,
+	sort_three_cases(a, a->top->value, a->top->next->value,
 		a->top->next->next->value);
 }

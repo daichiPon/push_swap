@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/15 19:46:53 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 21:13:40 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,7 @@ typedef struct s_stack
 	size_t			size;
 }					t_stack;
 
-
-int					arg_check(int argc, char *argv[],int *flag,int *bench);
+int					arg_check(int argc, char *argv[], int *flag, int *bench);
 int					is_valid_number(char *str);
 void				init_stack(t_stack *a, int argc, char *argv[]);
 double				compute_disorder(t_stack *a);
@@ -57,7 +56,7 @@ t_command			*op_count(void);
 
 void				medium_sort(t_stack *a, t_stack *b);
 void				complex(t_stack *a, t_stack *b);
-void    			simple_sort(t_stack *a, t_stack *b);
+void				simple_sort(t_stack *a, t_stack *b);
 int					find_min_index(t_stack *a);
 void				sort_three(t_stack *a);
 void				rotate_to_min(t_stack *a, int max_idx, int size);
