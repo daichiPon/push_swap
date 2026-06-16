@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 00:00:00 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/06/16 19:32:14 by hsachie          ###   ########.fr       */
+/*   Updated: 2026/06/16 20:35:12 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static const char	*strategy_name(int flag)
 		return ("simple (O(n^2))");
 	if (flag == 1)
 		return ("adaptive");
-	return (NULL);
+	return ("adaptive");
 }
 
 static int	total_ops(t_command *c)
