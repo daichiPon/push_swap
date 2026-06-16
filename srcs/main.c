@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/15 21:40:24 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/16 20:16:11 by hsachie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	main(int argc, char *argv[])
 	t_stack	b;
 	double	res;
 	t_node	*node;
-	int		flag;
-	int		bench;
+	int	flag;
+	int	bench;
 
 	flag = 0;
 	bench = 0;
@@ -49,6 +49,12 @@ int	main(int argc, char *argv[])
 		medium_sort(&a, &b);
 	else if (flag == 2)
 		simple_sort(&a, &b);
+	else if (flag == 1)
+	{
+		// t_stack *pa = &a;
+		// t_stack *pb = &b;
+		sort_adaptive(&a, &b);
+	}
 	if (bench)
 		print_bench(res, flag);
 	node = a.top;

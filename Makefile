@@ -7,7 +7,8 @@ SRCS = srcs/main.c srcs/utils/check.c srcs/utils/compute_disorder.c srcs/utils/i
 	srcs/operations/push_handler.c srcs/operations/reverse_rotate_handler.c srcs/operations/rotate_handler.c srcs/operations/swap_handler.c\
 	srcs/ft_printf/ft_printf.c srcs/ft_printf/ft_printf_utils.c\
 	srcs/ft_printf/utils/ft_putchar.c srcs/ft_printf/utils/ft_putnbr.c srcs/ft_printf/utils/ft_putstr.c srcs/ft_printf/utils/ft_putnbr_u.c srcs/ft_printf/utils/ft_puthex_big.c\
-	srcs/ft_printf/utils/ft_puthex_lit.c srcs/ft_printf/utils/ft_puthex_p.c srcs/ft_printf/utils/ft_strchr.c srcs/ft_printf/utils/ft_putfloat.c \
+	srcs/ft_printf/utils/ft_puthex_lit.c srcs/ft_printf/utils/ft_puthex_p.c srcs/ft_printf/utils/ft_strchr.c srcs/ft_printf/utils/ft_putfloat.c\
+	srcs/adaptive/adaptive.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -31,6 +32,5 @@ fclean: clean
 re:
 	$(MAKE) fclean
 	$(MAKE) all
-
 
 .PHONY: all clean fclean re
