@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/10 20:57:51 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/11 07:47:59 by hsachie          ###   ########.fr       */
+/*   Created: 2026/06/10 08:01:48 by hsachie           #+#    #+#             */
+/*   Updated: 2026/06/15 21:11:31 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,22 +42,6 @@ void	sort_three(t_stack *a)
 			sa(a);
 		return ;
 	}
-	sort_three_cases(a, a->top->value,
-		a->top->next->value,
+	sort_three_cases(a, a->top->value, a->top->next->value,
 		a->top->next->next->value);
-}
-
-int     stack_size(t_stack *a)
-{
-    t_node  *cur;
-    int     size;
-
-    cur = a->top;
-    size = 0;
-    while (cur)
-    {
-        size++;
-        cur = cur->next;
-    }
-    return (size);
 }

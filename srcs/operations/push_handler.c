@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   push_handler.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:38:36 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/09 15:15:27 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 21:12:08 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,25 @@ void	pa(t_stack *a, t_stack *b)
 	b->size--;
 	op_count()->pa++;
 	ft_printf("pa\n");
+}
+
+void	pb(t_stack *a, t_stack *b)
+{
+	t_node	*tmp;
+
+	if (a->size == 0)
+		return ;
+	tmp = a->top;
+	a->top = a->top->next;
+	if (a->top)
+		a->top->prev = NULL;
+	tmp->next = b->top;
+	if (b->top)
+		b->top->prev = tmp;
+	tmp->prev = NULL;
+	b->top = tmp;
+	a->size--;
+	b->size++;
+	op_count()->pb++;
+	ft_printf("pb\n");
 }
