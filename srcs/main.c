@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/16 20:16:11 by hsachie          ###   ########.fr       */
+/*   Updated: 2026/06/16 20:41:31 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int	main(int argc, char *argv[])
 		return (write(1, "Error\n", 6));
 	init_stack(&a, &b, argc, argv);
 	res = compute_disorder(&a);
-	printf("flagだ%d", flag);
 	if (flag == 4)
 		complex(&a, &b);
 	else if (flag == 3)
@@ -50,20 +49,10 @@ int	main(int argc, char *argv[])
 	else if (flag == 2)
 		simple_sort(&a, &b);
 	else if (flag == 1)
-	{
-		// t_stack *pa = &a;
-		// t_stack *pb = &b;
 		sort_adaptive(&a, &b);
-	}
 	if (bench)
 		print_bench(res, flag);
 	node = a.top;
-	ft_printf("結果");
-	while (node)
-	{
-		ft_printf("a: %d\n", node->value);
-		node = node->next;
-	}
 	free_stack(&a);
 	free_stack(&b);
 	return (0);
