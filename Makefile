@@ -14,7 +14,8 @@ SRCS = srcs/main.c srcs/utils/check.c srcs/utils/compute_disorder.c srcs/utils/i
 	srcs/ft_printf/utils/ft_putnbr_u.c srcs/ft_printf/utils/ft_puthex_big.c\
 	srcs/ft_printf/utils/ft_puthex_lit.c srcs/ft_printf/utils/ft_puthex_p.c\
 	srcs/ft_printf/utils/ft_strchr.c srcs/ft_printf/utils/ft_putfloat.c \
-	srcs/simple/sort_simple.c srcs/simple/sort_three.c srcs/simple/sort_utils.c 
+	srcs/simple/sort_simple.c srcs/simple/sort_three.c srcs/simple/sort_utils.c\
+    srcs/adaptive/adaptive.c
 
 OBJS = $(SRCS:.c=.o)
 

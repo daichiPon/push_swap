@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 00:00:00 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/06/12 05:59:35 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/16 19:32:14 by hsachie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ static const char	*strategy_name(int flag)
 		return ("medium (chunk sort, O(n^2))");
 	if (flag == 2)
 		return ("simple (O(n^2))");
-	return ("adaptive");
+	if (flag == 1)
+		return ("adaptive");
+	return (NULL);
 }
 
 static int	total_ops(t_command *c)
