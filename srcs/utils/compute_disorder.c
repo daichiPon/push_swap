@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   compute_disorder.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 03:47:07 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/09 15:49:21 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/16 19:04:42 by hsachie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ double	compute_disorder(t_stack *a)
 	}
 	if (total_pairs == 0)
 		return (0.0);
-	return ((double)mistakes / total_pairs);
+	return ((int)((double)mistakes / total_pairs * 10) / 10.0);
 }

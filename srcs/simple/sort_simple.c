@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: hsachie <hsachie@student.42.jp>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 21:56:10 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/14 20:37:25 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/15 20:05:49 by hsachie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 static void push_max_to_b(t_stack *a, t_stack *b, int *size)
 {
     int max_idx;
