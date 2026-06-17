@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/16 20:41:31 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/17 18:33:57 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,13 @@ int	main(int argc, char *argv[])
 	t_stack	a;
 	t_stack	b;
 	double	res;
-	t_node	*node;
 	int	flag;
 	int	bench;
 
 	flag = 0;
 	bench = 0;
 	if (arg_check(argc, argv, &flag, &bench))
-		return (write(1, "Error\n", 6));
+		return (write(2, "Error\n", 6));
 	init_stack(&a, &b, argc, argv);
 	res = compute_disorder(&a);
 	if (flag == 4)
@@ -52,7 +51,6 @@ int	main(int argc, char *argv[])
 		sort_adaptive(&a, &b);
 	if (bench)
 		print_bench(res, flag);
-	node = a.top;
 	free_stack(&a);
 	free_stack(&b);
 	return (0);

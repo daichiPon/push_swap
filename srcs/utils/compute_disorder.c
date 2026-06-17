@@ -36,5 +36,5 @@ double	compute_disorder(t_stack *a)
 	}
 	if (total_pairs == 0)
 		return (0.0);
-	return ((int)((double)mistakes / total_pairs * 10) / 10.0);
+	return ((double)mistakes / total_pairs);
 }
