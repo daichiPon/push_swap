@@ -56,7 +56,7 @@ void                print_bench(double disorder, int flag);
 void                put_str_fd(const char *s, int fd);
 void                put_nbr_fd(int n, int fd);
 void                put_disorder_fd(double disorder, int fd);
-void                put_line(const char *label, int value, int fd);
+void                put_op(const char *label, int value);
 void                init_stack(t_stack *a, t_stack *b, int argc, char *argv[]);
 
 void                medium_sort(t_stack *a, t_stack *b);

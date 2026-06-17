@@ -48,9 +48,9 @@ void	put_disorder_fd(double disorder, int fd)
 	write(fd, "%", 1);
 }
 
-void	put_line(const char *label, int value, int fd)
+void	put_op(const char *label, int value)
 {
-	put_str_fd(label, fd);
-	put_nbr_fd(value, fd);
-	write(fd, "\n", 1);
+	put_str_fd(label, 2);
+	put_nbr_fd(value, 2);
+	put_str_fd("  ", 2);
 }
