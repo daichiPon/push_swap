@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/17 21:30:43 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/18 07:30:30 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ void	free_stack(t_stack *stack)
 	}
 }
 
-void	run_sort(t_stack *a, t_stack *b, int flag)
+void	run_sort(t_stack *a, t_stack *b, int flag, double res)
 {
+	if(res == 0)
+		return;
 	if (flag == 4)
 		complex(a, b);
 	else if (flag == 3)
@@ -36,7 +38,7 @@ void	run_sort(t_stack *a, t_stack *b, int flag)
 	else if (flag == 2)
 		simple_sort(a, b);
 	else if (flag == 1)
-		sort_adaptive(a, b);
+		sort_adaptive(a, b, res);
 }
 
 int	main(int argc, char *argv[])
@@ -53,9 +55,7 @@ int	main(int argc, char *argv[])
 		return (write(2, "Error\n", 6));
 	init_stack(&a, &b, argc, argv);
 	res = compute_disorder(&a);
-	if (bench)
-		*bench_mode() = 1;
-	run_sort(&a, &b, flag);
+	run_sort(&a, &b, flag, res);
 	if (bench)
 		print_bench(res, flag);
 	free_stack(&a);

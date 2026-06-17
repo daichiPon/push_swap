@@ -6,22 +6,19 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 00:00:00 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/06/17 00:00:00 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/18 07:30:05 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	*bench_mode(void)
-{
-	static int	mode;
-
-	return (&mode);
-}
-
 void	op_print(const char *s)
 {
-	if (*bench_mode() && isatty(1))
-		return ;
-	ft_printf("%s", s);
+	int i;
+	i=0;
+	while(s[i])
+	{
+		write(1,&s[i],1);
+		i++;
+	}
 }

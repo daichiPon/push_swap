@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/17 21:30:27 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/18 07:30:46 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void				put_str_fd(const char *s, int fd);
 void				put_nbr_fd(int n, int fd);
 void				put_disorder_fd(double disorder, int fd);
 void				put_op(const char *label, int value);
-int					*bench_mode(void);
 void				op_print(const char *s);
 void				init_stack(t_stack *a, t_stack *b, int argc, char *argv[]);
 
@@ -71,7 +70,7 @@ void				rotate_to_min(t_stack *a, int min_idx, int size);
 void				rotate_to_max(t_stack *a, int max_idx, int size);
 int					stack_size(t_stack *a);
 int					is_sorted(t_stack *a);
-void				sort_adaptive(t_stack *a, t_stack *b);
+void				sort_adaptive(t_stack *a, t_stack *b, double res);
 
 void				rotate(t_stack *s);
 void				reverse_rotate(t_stack *s);
