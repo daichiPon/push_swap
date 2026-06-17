@@ -23,7 +23,7 @@ void	sa(t_stack *a)
 	a->top->value = a->top->next->value;
 	a->top->next->value = tmp;
 	op_count()->sa++;
-	ft_printf("sa\n");
+	op_print("sa\n");
 }
 
 void	sb(t_stack *b)
@@ -36,7 +36,7 @@ void	sb(t_stack *b)
 	b->top->value = b->top->next->value;
 	b->top->next->value = tmp;
 	op_count()->sb++;
-	ft_printf("sb\n");
+	op_print("sb\n");
 }
 
 void	ss(t_stack *a, t_stack *b)
@@ -56,5 +56,5 @@ void	ss(t_stack *a, t_stack *b)
 		b->top->next->value = tmp;
 	}
 	op_count()->ss++;
-	ft_printf("ss\n");
+	op_print("ss\n");
 }

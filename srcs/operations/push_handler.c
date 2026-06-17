@@ -30,7 +30,7 @@ void	pa(t_stack *a, t_stack *b)
 	a->size++;
 	b->size--;
 	op_count()->pa++;
-	ft_printf("pa\n");
+	op_print("pa\n");
 }
 
 void	pb(t_stack *a, t_stack *b)
@@ -51,5 +51,5 @@ void	pb(t_stack *a, t_stack *b)
 	a->size--;
 	b->size++;
 	op_count()->pb++;
-	ft_printf("pb\n");
+	op_print("pb\n");
 }

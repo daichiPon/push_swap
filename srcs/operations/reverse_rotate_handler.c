@@ -32,14 +32,14 @@ void	rra(t_stack *a)
 {
 	reverse_rotate(a);
 	op_count()->rra++;
-	ft_printf("rra\n");
+	op_print("rra\n");
 }
 
 void	rrb(t_stack *b)
 {
 	reverse_rotate(b);
 	op_count()->rrb++;
-	ft_printf("rrb\n");
+	op_print("rrb\n");
 }
 
 void	rrr(t_stack *a, t_stack *b)
@@ -47,5 +47,5 @@ void	rrr(t_stack *a, t_stack *b)
 	reverse_rotate(a);
 	reverse_rotate(b);
 	op_count()->rrr++;
-	ft_printf("rrr\n");
+	op_print("rrr\n");
 }
