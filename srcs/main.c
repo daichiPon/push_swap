@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/17 18:33:57 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/06/17 21:30:43 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ int	main(int argc, char *argv[])
 	t_stack	a;
 	t_stack	b;
 	double	res;
-	int	flag;
-	int	bench;
+	int		flag;
+	int		bench;
 
 	flag = 0;
 	bench = 0;
