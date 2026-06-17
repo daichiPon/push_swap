@@ -57,7 +57,6 @@ void				put_str_fd(const char *s, int fd);
 void				put_nbr_fd(int n, int fd);
 void				put_disorder_fd(double disorder, int fd);
 void				put_op(const char *label, int value);
-int					*bench_mode(void);
 void				op_print(const char *s);
 void				init_stack(t_stack *a, t_stack *b, int argc, char *argv[]);
 

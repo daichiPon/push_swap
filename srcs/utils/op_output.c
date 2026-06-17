@@ -12,15 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
-int	*bench_mode(void)
-{
-	static int	mode;
-
-	return (&mode);
-}
-
 void	op_print(const char *s)
 {
-	if (*bench_mode() == 0)
-		ft_printf("%s", s);
+	ft_printf("%s", s);
 }

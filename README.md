@@ -336,6 +336,12 @@ subjectで定義された目標値(`checker` で検証):
 再現方法の例:
 
 ```sh
+ARG="4 67 3 87 23" && \
+./push_swap --complex ${=ARG} | \
+./checker_linux ${=ARG}
+```
+
+```sh
 ARG=$(shuf -i 1-500 -n 100 | tr '\n' ' ')
 ./push_swap --bench ${=ARG} 2> bench.txt > ops.txt
 ./checker ${=ARG} < ops.txt
