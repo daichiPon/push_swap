@@ -53,6 +53,8 @@ int	main(int argc, char *argv[])
 		return (write(2, "Error\n", 6));
 	init_stack(&a, &b, argc, argv);
 	res = compute_disorder(&a);
+	if (bench)
+		*bench_mode() = 1;
 	run_sort(&a, &b, flag);
 	if (bench)
 		print_bench(res, flag);
