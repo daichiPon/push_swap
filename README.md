@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by dnakamot, hsachie.*
+*This project has been created as part of the 42 curriculum by dnakamot. hsachie.*
 
 # Push_swap
 
@@ -6,7 +6,7 @@
 > スタックを最小手数で昇順に並べ替えるプロジェクト。アルゴリズムの計算量を
 > 実際に体験しながら学ぶことが目的です。
 
-## 説明
+## 説明/“Description”
 
 **Push_swap** は42カリキュラムのアルゴリズム系プロジェクトです。
 
@@ -31,7 +31,7 @@
 `--bench` モードを指定すると、`stderr` に入力の disorder(%)、使用した戦略名
 とその理論的な計算量クラス、合計操作数、各操作の内訳が出力されます。
 
-## 使い方
+## 使い方/“Instructions”
 
 ### 必要環境
 
@@ -50,6 +50,12 @@ make re     # fclean + all
 
 このMakefileは不要な再リンクを行いません。一部のソースファイルだけを変更して
 `make` を再実行した場合、必要な部分だけがリビルド・再リンクされます。
+
+出力は`srcs/utils/op_output.c` と `srcs/utils/bench_utils.c` に実装した最小限の
+ヘルパー(`put_str_fd`、`put_nbr_fd`、`put_disorder_fd` など)で行っています。
+リスト操作や文字列比較に必要な少数の補助関数(`ft_atoi`、`ft_strcmp`、
+`ft_strncmp`、`ft_lstnew`、`ft_lstadd_back`)のみを `srcs/utils` 配下に
+自前で持っています。
 
 ### 実行方法
 
@@ -74,14 +80,7 @@ pb
 rra
 pb
 pb
-ra
-pb
-ra
-pb
-pb
-pa
-pa
-pa
+sa
 pa
 pa
 pa
@@ -91,8 +90,8 @@ pa
 
 ```sh
 $> ARG="4 67 3 87 23"
-$> ./push_swap --adaptive $ARG | wc -l
-13
+$> ./push_swap --adaptive ${=ARG} | wc -l
+17
 ```
 
 ### ベンチマークモード
@@ -111,15 +110,18 @@ $> ./push_swap --bench [フラグ] 1 2 ... 2> bench.txt
 - 各操作種別(`sa`, `sb`, `ss`, `pa`, `pb`, `ra`, `rb`, `rr`, `rra`, `rrb`,
   `rrr`)の回数
 
-例:
+例(100個のランダムな入力):
 
 ```
-[bench] disorder: 49.93%
+[bench] disorder: 44.53%
 [bench] strategy: Adaptive / O(n√n)
-[bench] total_ops: 7997
-[bench] sa: 0 sb: 0 ss: 0 pa: 500 pb: 500
-[bench] ra: 4840 rb: 1098 rr: 0 rra: 0 rrb: 1059 rrr: 0
+[bench] total_ops: 828
+[bench] sa: 0  sb: 0  ss: 0  pa: 100  pb: 100  
+[bench] ra: 412  rb: 133  rr: 0  rra: 0  rrb: 83  rrr: 0  
 ```
+
+戦略名の計算量クラスは出力上 ASCII で表記され、Simple は `O(n^2)`、
+Medium は `O(n√n)`、Complex は `O(n log n)` と表示されます。
 
 ## 操作一覧
 
@@ -330,8 +332,12 @@ subjectで定義された目標値(`checker` で検証):
 
 | 入力サイズ | 使用戦略 | 平均操作数 |
 |---|---|---|
-| 100 | adaptive | _TODO_ |
-| 500 | adaptive | _TODO_ |
+| 100 | adaptive(disorder ≈ 0.5 → Complex) | 約 930 |
+| 500 | adaptive(disorder ≈ 0.5 → Complex) | 約 7300 |
+
+> ランダムに生成した値(`shuf`)は disorder がおよそ 0.5 になるため、
+> `--adaptive` では主に Complex(基数ソート)が選択されます。上記は
+> 各サイズ 10 回ずつ実行した操作数の平均値です。
 
 再現方法の例:
 
@@ -344,7 +350,7 @@ ARG="4 67 3 87 23" && \
 ```sh
 ARG=$(shuf -i 1-500 -n 100 | tr '\n' ' ')
 ./push_swap --bench ${=ARG} 2> bench.txt > ops.txt
-./checker ${=ARG} < ops.txt
+./checker_linux ${=ARG} < ops.txt
 cat bench.txt
 ```
 
@@ -365,7 +371,7 @@ Error
 - 重複した値
 - (`checker` の場合)`stdin` から読み込んだ未知または不正な形式の命令
 
-## 参考資料・AI利用について
+## 参考資料・AI利用について/“Resources”
 
 ### 参考資料
 
