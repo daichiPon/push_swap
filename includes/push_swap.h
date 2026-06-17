@@ -6,14 +6,13 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:18:53 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/18 07:30:46 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/18 07:33:50 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "ft_printf.h"
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
