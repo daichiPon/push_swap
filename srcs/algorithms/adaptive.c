@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   adaptive.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 19:44:02 by hsachie           #+#    #+#             */
-/*   Updated: 2026/06/18 05:48:10 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/19 05:03:33 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	sort_adaptive(t_stack *a, t_stack *b, double res)
 {
-	if (res < 0.2)
+	if(a->size == 3)
+		sort_three(a);
+	else if (res < 0.2 || a->size<= 5)
 		simple_sort(a, b);
 	else if (res < 0.5)
 		medium_sort(a, b);
