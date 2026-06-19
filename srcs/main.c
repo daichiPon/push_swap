@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:55:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/06/18 07:30:30 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/19 22:07:14 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	free_stack(t_stack *stack)
 
 void	run_sort(t_stack *a, t_stack *b, int flag, double res)
 {
-	if(res == 0)
-		return;
+	if (res == 0)
+		return ;
 	if (flag == 4)
 		complex(a, b);
 	else if (flag == 3)

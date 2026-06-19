@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 00:00:00 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/06/18 07:30:05 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/06/19 22:07:03 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 void	op_print(const char *s)
 {
-	int i;
-	i=0;
-	while(s[i])
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		write(1,&s[i],1);
+		write(1, &s[i], 1);
 		i++;
 	}
 }
